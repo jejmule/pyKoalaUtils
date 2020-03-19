@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pyKoalaUtils
+Version: 0.0.1
+Summary: Utility to open LynceeTec Koala bin files
+Home-page: https://github.com/pypa/sampleproject
+Author: Jerome Parent
+Author-email: jerome.parent@lyncetec.com
+License: UNKNOWN
+Description: Utility to :
+        *read/write koala bin files
+        *read timstamps.txt
+        *raed strobosetup.xml
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
