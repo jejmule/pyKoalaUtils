@@ -11,7 +11,7 @@ setuptools.setup(
     description="Utility to open LynceeTec Koala bin files",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/jejmule/pyKoalaUtils",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
