@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyKoalaUtils", # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="Jerome Parent",
     author_email="jerome.parent@lyncetec.com",
     description="Utility to open LynceeTec Koala bin files",
