@@ -80,7 +80,7 @@ def read_mat_bin(fname):
     #print(kbin_header)
     tmp = numpy.fromfile(f, dtype='float32')
     #print 'array = {}'.format(len(tmp))
-    f.close
+    f.close()
     shape = (kbin_header['height'], kbin_header['width'])
     return (tmp.reshape(shape), kbin_header)
 
@@ -211,7 +211,7 @@ def read_mat_cplx_bin(fname):
     shape = (kcplx_header['height'], kcplx_header['width'])
     #print kcplx_header
     tmp = numpy.fromfile(f, dtype='float32')
-    f.close
+    f.close()
     real_tmp = (tmp[0:kcplx_header['height']*kcplx_header['width']]).reshape(shape)
     imag_tmp = (tmp[kcplx_header['height']*kcplx_header['width']:]).reshape(shape)
     #print tmp
