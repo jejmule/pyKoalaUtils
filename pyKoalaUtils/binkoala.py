@@ -83,6 +83,35 @@ def read_mat_bin(fname):
     f.close()
     shape = (kbin_header['height'], kbin_header['width'])
     return (tmp.reshape(shape), kbin_header)
+    
+def read_mat_bin_header(fname) :
+    """
+    Reads header of a .bin file saved by LynceeTec Koala software 
+    Parameters
+    ----------
+    fname : string
+        path to the file
+
+    Returns
+    -------
+    header : struct
+        A structure containing the fields read form the .bin header
+
+    """
+    kbin_header_dtype = numpy.dtype([
+     ("version", "u1"),
+     ("endian", "u1"),
+     ("head_size", "i4"),
+     ("width", "i4"),
+     ("height", "i4"),
+     ("px_size", "f4"), # pixel size in [m]
+     ("hconv", "f4"),  # height conversion factor (-> m)
+     ("unit_code", "u1")   # 1=rad 2=m
+    ])
+    f = open(fname, 'rb')
+    kbin_header = numpy.fromfile(f, dtype=kbin_header_dtype, count=1)[0]
+    f.close()
+    return kbin_header
 
 def write_mat_bin(fname, buf, width, height, px_size=1., hconv=1., unit_code=0):
     """
